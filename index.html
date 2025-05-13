@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM Adventure: A Technical Guide - Tranquil Edition</title>
+    <title>LLM Adventure: A Technical Guide - Muted Forest Edition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     
@@ -12,7 +12,7 @@
         tex: {
           inlineMath: [['$', '$'], ['\\(', '\\)']],
           displayMath: [['$$', '$$'], ['\\[', '\\]']],
-          tags: 'ams' // For equation numbering if needed, though not used currently
+          tags: 'ams' 
         },
         svg: {
           fontCache: 'global'
@@ -24,10 +24,10 @@
     <style>
         body {
             font-family: 'VT323', monospace;
-            background-color: #282c34; /* Tranquil: Darker, slightly desaturated blue/gray */
-            color: #98c379; /* Tranquil: Soft green for general pre/border, can be base text if needed */
-            line-height: 1.9; /* Increased for readability */
-            font-size: 20px; /* Increased base font size */
+            background-color: #2f362f; /* Muted Forest: Dark, slightly desaturated forest green */
+            color: #d8d8d0; /* Muted Forest: Warm off-white for base text */
+            line-height: 1.9; 
+            font-size: 20px; 
         }
         html, body {
             height: 100%;
@@ -35,41 +35,41 @@
             padding: 0;
         }
         .container {
-            max-width: 1100px; /* Wider for more technical content & larger fonts */
+            max-width: 1100px; 
             margin: 0 auto;
-            padding: 30px; /* Increased padding */
-            min-height: calc(100vh - 120px); /* Adjusted */
+            padding: 30px; 
+            min-height: calc(100vh - 120px); 
         }
         h1, h2, h3, h4 {
             font-family: 'VT323', monospace;
-            color: #61afef; /* Tranquil: Soft blue for headers */
-            text-shadow: 1px 1px #3a698f; /* Tranquil: Darker blue shadow, more subtle */
-            margin-bottom: 1.5rem; /* Increased margin */
+            color: #a8b8a0; /* Muted Forest: Muted sage green for headers */
+            text-shadow: 1px 1px #50584c; /* Muted Forest: Darker sage shadow */
+            margin-bottom: 1.5rem; 
         }
         h1 {
-            font-size: 3.5rem; /* Adjusted */
+            font-size: 3.5rem; 
             text-align: center;
             margin-bottom: 3.5rem; 
         }
         h2 {
-            font-size: 2.6rem; /* Adjusted */
-            border-bottom: 4px solid #56b6c2; /* Tranquil: Desaturated cyan/teal accent border */
+            font-size: 2.6rem; 
+            border-bottom: 4px solid #788870; /* Muted Forest: Muted olive green accent border */
             padding-bottom: 0.8rem;
             margin-top: 3.5rem; 
         }
         h3 {
-            font-size: 2rem; /* Adjusted */
-            color: #61afef; 
+            font-size: 2rem; 
+            color: #a8b8a0; 
             margin-top: 2.5rem;
         }
         h4 {
-            font-size: 1.6rem; /* Adjusted */
-            color: #56b6c2; /* Tranquil: Calm teal for sub-sub-headers */
+            font-size: 1.6rem; 
+            color: #b0a08c; /* Muted Forest: Soft, light tan/brown for sub-sub-headers */
             margin-top: 2rem;
         }
         p, li {
-            margin-bottom: 1.4rem; /* More spacing */
-            color: #abb2bf; /* Tranquil: Common light gray for text */
+            margin-bottom: 1.4rem; 
+            color: #d8d8d0; /* Muted Forest: Warm off-white for text */
         }
         ul, ol {
             margin-left: 30px; 
@@ -79,21 +79,21 @@
             margin-bottom: 0.7rem;
         }
         a {
-            color: #c678dd; /* Tranquil: Soft purple for links */
+            color: #c8a078; /* Muted Forest: Muted amber/light brown for links */
             text-decoration: underline;
-            font-weight: normal; /* Keeping it less bold for tranquility */
+            font-weight: normal; 
         }
         a:hover {
-            color: #be50e7; /* Brighter purple on hover */
+            color: #d8b088; /* Muted Forest: Brighter amber on hover */
         }
         pre {
-            background-color: #21252b; /* Tranquil: Darkest background for code blocks */
-            border: 2px solid #98c379; /* Tranquil: Soft green border */
-            padding: 20px; /* More padding */
+            background-color: #202420; /* Muted Forest: Darkest green for code blocks */
+            border: 2px solid #88a080; /* Muted Forest: Gentle green border */
+            padding: 20px; 
             border-radius: 0px; 
             overflow-x: auto; 
-            color: #98c379; /* Tranquil: Soft green text */
-            font-size: 18px; /* Adjusted pre text */
+            color: #88a080; /* Muted Forest: Gentle green text */
+            font-size: 18px; 
             line-height: 1.7; 
             margin-top: 20px; 
             margin-bottom: 20px;
@@ -101,39 +101,39 @@
             box-sizing: border-box; 
         }
         .navbar {
-            background-color: #21252b; /* Tranquil: Darkest */
+            background-color: #262b26; /* Muted Forest: Darkest forest green */
             padding: 20px 0; 
             text-align: center;
-            border-bottom: 4px solid #98c379; /* Tranquil: Soft green border */
+            border-bottom: 4px solid #88a080; /* Muted Forest: Gentle green border */
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         .navbar a {
-            color: #61afef; /* Tranquil: Soft blue for nav links */
+            color: #a8b8a0; /* Muted Forest: Muted sage for nav links */
             margin: 0 15px; 
             text-decoration: none;
-            font-size: 1.4rem; /* Adjusted */
+            font-size: 1.4rem; 
             font-family: 'VT323', monospace;
         }
         .navbar a:hover {
-            color: #56b6c2; /* Tranquil: Teal on hover */
+            color: #b0a08c; /* Muted Forest: Soft tan on hover */
             text-decoration: underline;
         }
         .content-section {
-            background-color: #353b45; /* Tranquil: Slightly lighter than body */
+            background-color: #3c443c; /* Muted Forest: Slightly lighter dark forest green */
             padding: 35px; 
             margin-bottom: 35px; 
-            border: 4px solid #56b6c2; /* Tranquil: Teal border */
+            border: 4px solid #788870; /* Muted Forest: Muted olive green border */
             border-radius: 0px;
         }
         .footer {
             text-align: center;
             padding: 35px; 
-            background-color: #21252b; /* Tranquil: Darkest */
-            border-top: 4px solid #98c379; /* Tranquil: Soft green border */
-            color: #98c379; /* Tranquil: Soft green text */
-            font-size: 1.2rem; /* Adjusted */
+            background-color: #262b26; /* Muted Forest: Darkest forest green */
+            border-top: 4px solid #88a080; /* Muted Forest: Gentle green border */
+            color: #88a080; /* Muted Forest: Gentle green text */
+            font-size: 1.2rem; 
             width: 100%;
             font-family: 'VT323', monospace;
         }
@@ -141,21 +141,20 @@
             display: block; 
             margin-top: 15px;
             padding: 15px;
-            background-color: #2c343f; /* Slightly different dark for diagram background */
-            border-left: 4px solid #e5c07b; /* Tranquil: Soft gold/yellow accent */
+            background-color: #303830; /* Muted Forest: Different dark for diagram background */
+            border-left: 4px solid #b8a070; /* Muted Forest: Muted gold/ochre accent */
         }
         code { /* Inline code styling */
-            background-color: #3f444f; /* Tranquil: Darker grey */
-            color: #e06c75; /* Tranquil: Soft red */
-            padding: 3px 6px; /* Adjusted padding */
+            background-color: #4a504a; /* Muted Forest: Muted green */
+            color: #c0b098; /* Muted Forest: Soft beige */
+            padding: 3px 6px; 
             border-radius: 0px;
             font-family: 'VT323', monospace;
-            font-size: 0.95em; /* Slightly smaller than surrounding text */
+            font-size: 0.95em; 
         }
-        /* MathJax specific styling if needed - usually not required for basic rendering */
         mjx-container {
-            text-align: left !important; /* Ensure MathJax output aligns left */
-            overflow-x: auto; /* Allow horizontal scroll for very wide equations */
+            text-align: left !important; 
+            overflow-x: auto; 
             overflow-y: hidden;
             max-width: 100%;
         }
@@ -209,7 +208,7 @@ Tokens: ["LL", "Ms", "Ġare", "Ġpowerful", "."]  (Ġ might represent a space pr
 Numerical IDs: [1245, 987, 3456, 8765, 13]
 </pre>
             </div>
-            <p>Further Reading: <em>[Link to BPE Paper]</em>, <em>[Link to WordPiece Explanation]</em></p>
+            <p>Further Reading: <em><a href="https://arxiv.org/abs/1508.07909" target="_blank" rel="noopener noreferrer">Neural Machine Translation of Rare Words with Subword Units (Sennrich et al., 2015) - BPE</a></em>, <em><a href="https://arxiv.org/abs/1609.08144" target="_blank" rel="noopener noreferrer">Google's Neural Machine Translation System (Wu et al., 2016) - Discusses WordPiece</a></em>, <em><a href="https://arxiv.org/abs/1808.06226" target="_blank" rel="noopener noreferrer">SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing (Kudo & Richardson, 2018)</a></em></p>
 
             <h3>Embeddings: Vectorial Representation of Meaning</h3>
             <p>Tokens are mapped to dense vectors called embeddings. While earlier NLP models used pre-trained embeddings like Word2Vec or GloVe, Transformers typically learn their own embeddings from scratch as part of the end-to-end training process. These embeddings ($E$) transform token IDs into high-dimensional vectors (e.g., $d_{model} = 768$ or $4096$ dimensions).</p>
@@ -259,7 +258,7 @@ Probability Distribution over Vocabulary for Next Token
         <section id="transformers" class="content-section">
             <h2>Level 2: The Transformer Architecture - A Deep Dive</h2>
             <p>The Transformer, introduced in "Attention Is All You Need" by Vaswani et al. (2017), revolutionized sequence modeling by relying entirely on attention mechanisms, dispensing with recurrence and convolutions.</p>
-            <p>Further Reading: <em><a href="https://arxiv.org/abs/1706.03762" target="_blank">Attention Is All You Need (Vaswani et al., 2017)</a></em></p>
+            <p>Further Reading: <em><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener noreferrer">Attention Is All You Need (Vaswani et al., 2017)</a></em></p>
 
             <h3>Core Components:</h3>
             <ul>
@@ -395,7 +394,7 @@ Output
             
             <h3>Model Distillation</h3>
             <p>Knowledge distillation transfers knowledge from a large "teacher" model to a smaller "student" model. The student is trained to mimic the teacher's output probabilities (soft labels) or intermediate representations. This allows for creating smaller, faster models while retaining much of the teacher's performance.</p>
-            <p>Further Reading: <em>[Link to Hinton's Distillation Paper]</em></p>
+            <p>Further Reading: <em><a href="https://arxiv.org/abs/1503.02531" target="_blank" rel="noopener noreferrer">Distilling the Knowledge in a Neural Network (Hinton et al., 2015)</a></em></p>
             <div class="ascii-art-container">
 <pre>
 +---------------------+      Input Data      +---------------------+
@@ -415,7 +414,7 @@ Output
                 <li><strong>Post-Training Quantization (PTQ):</strong> Applied after training. Requires a small calibration dataset. Simpler but can lead to more accuracy loss.</li>
                 <li><strong>Quantization-Aware Training (QAT):</strong> Simulates quantization effects during training, allowing the model to adapt. Often yields better accuracy for lower bit-widths.</li>
             </ul>
-            <p>Further Reading: <em>[Link to Survey on Quantization for LLMs]</em></p>
+            <p>Further Reading: <em><a href="https://arxiv.org/abs/2306.08522" target="_blank" rel="noopener noreferrer">A Survey on Quantization for Large Language Models (Wu et al., 2023)</a> or <a href="https://arxiv.org/abs/2402.15832" target="_blank" rel="noopener noreferrer">A Comprehensive Survey of Quantization Strategies for Large Language Models (Liu et al., 2024)</a></em></p>
             <div class="ascii-art-container">
 <pre>
 Weight $w \in \mathbb{R}$ (e.g., FP32)
@@ -476,16 +475,32 @@ A: Roger started with 5 balls. 2 cans of 3 tennis balls each is 2 * 3 = 6 balls.
 
 Q: The cafeteria had 23 apples. If they used 20 to make lunch and bought 6 more, how many apples do they have?
 A:</code></pre>
-            <p>Further Reading: <em><a href="https://arxiv.org/abs/2201.11903" target="_blank">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (Wei et al., 2022)</a></em></p>
+            <p>Further Reading: <em><a href="https://arxiv.org/abs/2201.11903" target="_blank" rel="noopener noreferrer">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (Wei et al., 2022)</a></em></p>
 
             <h4>Self-Consistency</h4>
             <p>An extension of CoT where multiple reasoning paths (multiple "thoughts") are sampled from the LLM using stochastic decoding (e.g., by increasing temperature). The most consistent answer among these paths is chosen as the final answer. This improves robustness, especially for complex reasoning tasks.</p>
-            <p>Further Reading: <em><a href="https://arxiv.org/abs/2203.11171" target="_blank">Self-Consistency Improves Chain of Thought Reasoning in Language Models (Wang et al., 2022)</a></em></p>
+            <p>Further Reading: <em><a href="https://arxiv.org/abs/2203.11171" target="_blank" rel="noopener noreferrer">Self-Consistency Improves Chain of Thought Reasoning in Language Models (Wang et al., 2022)</a></em></p>
+            
+            <h4>Meta-Prompting: Using LLMs to Create Prompts</h4>
+            <p>A powerful technique involves using an LLM itself to help generate, refine, or optimize prompts for another (or even the same) LLM. This can be useful for:</p>
+            <ul>
+                <li>Brainstorming initial prompt ideas for a complex task.</li>
+                <li>Iteratively refining a prompt based on desired output characteristics.</li>
+                <li>Generating variations of a prompt to test for robustness.</li>
+                <li>Creating few-shot examples for a new task.</li>
+            </ul>
+            <p>Example: You might prompt a "Prompt Engineering Assistant" LLM with:</p>
+            <pre><code>"I need to write a prompt for another LLM. The goal is to get it to summarize technical research papers into three bullet points, suitable for a non-expert audience.
+The summary should highlight the core problem, the proposed solution, and the key findings.
+Can you suggest a good prompt structure and some few-shot examples I could use?"</code></pre>
+            <p>This approach leverages the LLM's understanding of language and task decomposition to assist in the prompt engineering process itself.</p>
+            <p>Further Reading: <em><a href="https://arxiv.org/abs/2311.11482" target="_blank" rel="noopener noreferrer">Large Language Models as Optimizers (Yang et al., 2023) - Explores using LLMs for optimization tasks, including prompt optimization.</a></em></p>
+
 
             <h4>Advanced Prompting Strategies (Conceptual)</h4>
             <ul>
-                <li><strong>ReAct (Reason + Act):</strong> Combines reasoning (like CoT) with "actions" (like querying external tools or APIs for information) in an interleaved manner. This allows models to gather external knowledge to inform their reasoning. <em>[Link to ReAct Paper]</em></li>
-                <li><strong>Tree of Thoughts (ToT):</strong> Generalizes CoT by allowing the LLM to explore multiple reasoning paths (a tree of thoughts) and use heuristics or self-evaluation to decide which paths to continue exploring or prune. <em>[Link to ToT Paper]</em></li>
+                <li><strong>ReAct (Reason + Act):</strong> Combines reasoning (like CoT) with "actions" (like querying external tools or APIs for information) in an interleaved manner. This allows models to gather external knowledge to inform their reasoning. Further Reading: <em><a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener noreferrer">ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al., 2022)</a></em></li>
+                <li><strong>Tree of Thoughts (ToT):</strong> Generalizes CoT by allowing the LLM to explore multiple reasoning paths (a tree of thoughts) and use heuristics or self-evaluation to decide which paths to continue exploring or prune. Further Reading: <em><a href="https://arxiv.org/abs/2305.10601" target="_blank" rel="noopener noreferrer">Tree of Thoughts: Deliberate Problem Solving with Large Language Models (Yao et al., 2023)</a></em></li>
             </ul>
         </section>
         
@@ -510,7 +525,7 @@ A:</code></pre>
                 <li><strong>Retrieval Augmented Generation (RAG):</strong> (Covered in Landscape) Offloads knowledge to an external database, retrieving only relevant chunks to insert into the context, thus not requiring all information to fit in the fixed window.</li>
                 <li><strong>Context Compression/Summarization:</strong> Techniques to summarize earlier parts of a conversation or document to fit more information efficiently into the limited context window.</li>
             </ul>
-             <p>Further Reading: <em>[Link to RoPE Paper]</em>, <em>[Link to ALiBi Paper]</em>, <em>[Link to Longformer Paper]</em></p>
+             <p>Further Reading: <em><a href="https://arxiv.org/abs/2104.09864" target="_blank" rel="noopener noreferrer">RoFormer: Enhanced Transformer with Rotary Position Embedding (Su et al., 2021)</a></em>, <em><a href="https://arxiv.org/abs/2108.12409" target="_blank" rel="noopener noreferrer">Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation (Press et al., 2021) - ALiBi</a></em>, <em><a href="https://arxiv.org/abs/2004.05150" target="_blank" rel="noopener noreferrer">Longformer: The Long-Document Transformer (Beltagy et al., 2020)</a></em></p>
 
             <h3>API Interaction Protocols (De Facto Standards)</h3>
             <p>When interacting with LLMs via APIs (e.g., OpenAI API, Hugging Face Inference API), a common pattern involves sending a structured request, often JSON, that includes:</p>
@@ -565,7 +580,7 @@ LLM Generates Response
             <ul>
                 <li><strong>Ethical AI & Safety:</strong> Ongoing focus on mitigating bias, ensuring truthfulness (factuality), preventing misuse, enhancing interpretability, and developing robust safety guardrails (e.g., constitutional AI).</li>
             </ul>
-            <p>Further Reading: <em>[Link to Survey of LLMs]</em>, <em>[Link to RAG Paper by Lewis et al.]</em></p>
+            <p>Further Reading: <em><a href="https://arxiv.org/abs/2303.18223" target="_blank" rel="noopener noreferrer">A Survey of Large Language Models (Zhao et al., 2023)</a></em>, <em><a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener noreferrer">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al., 2020)</a></em></p>
         </section>
 
         <section id="local-llms" class="content-section">
@@ -592,14 +607,13 @@ LLM Generates Response
                 <li><strong>Hugging Face Ecosystem:</strong> <code>transformers</code>, <code>diffusers</code>, <code>accelerate</code>, <code>optimum</code>, Hugging Face Hub.</li>
                 <li><strong>Local Inference Frameworks:</strong>
                     <ul>
-                        <li><strong>llama.cpp:</strong> Highly optimized C/C++ inference for Llama-family models on CPU & GPU (Metal, CUDA, OpenCL). GGUF is its primary model format.</li>
-                        <li><strong>Ollama:</strong> User-friendly CLI and server for running models (often using llama.cpp or similar backends).</li>
+                        <li><strong>llama.cpp:</strong> Highly optimized C/C++ inference for Llama-family models on CPU & GPU (Metal, CUDA, OpenCL). GGUF is its primary model format. (<em><a href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener noreferrer">GitHub</a></em>)</li>
+                        <li><strong>Ollama:</strong> User-friendly CLI and server for running models (often using llama.cpp or similar backends). (<em><a href="https://ollama.com/" target="_blank" rel="noopener noreferrer">Website</a></em>)</li>
                         <li><strong>LM Studio, Jan.ai:</strong> GUI applications for downloading and running LLMs.</li>
                         <li><strong>Text Generation WebUI (Oobabooga):</strong> Feature-rich Gradio UI.</li>
                     </ul>
                 </li>
             </ul>
-            <p>Further Reading: <em>[Link to llama.cpp GitHub]</em>, <em>[Link to Ollama Website]</em></p>
         </section>
 
     </div>
